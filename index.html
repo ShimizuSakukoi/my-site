@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页 - 我的网站</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🏠</text></svg>">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            background: rgba(0,0,0,0.2);
+            color: #fff;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 20px;
+            max-width: 500px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        .card h2 { color: #333; margin-bottom: 15px; }
+        .card p { color: #666; line-height: 1.8; margin-bottom: 20px; }
+
+        /* 链接样式 */
+        .link {
+            display: inline-block;
+            padding: 12px 28px;
+            background: #667eea;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 16px;
+            margin: 8px;
+            transition: transform 0.2s;
+        }
+        .link:hover { transform: scale(1.05); }
+        .link.green { background: #28a745; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>首页</h1>
+    </header>
+
+    <div class="card">
+        <h2>跳转到其他网页</h2>
+        <p>有两种方式：</p>
+
+        <!-- 方式一：<a> 标签（普通链接） -->
+        <a class="link" href="page2.html">方式一：点我跳转到第二页</a>
+
+        <br><br>
+
+        <!-- 方式二：按钮 + JS 跳转 -->
+        <button class="link green" onclick="location.href='page2.html'">
+            方式二：用按钮跳转
+        </button>
+
+        <p style="margin-top:20px; font-size:14px; color:#999;">
+            核心就是 <code>&lt;a href="目标页面"&gt;</code> 标签
+        </p>
+    </div>
+</body>
+</html>
